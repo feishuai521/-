@@ -6,9 +6,9 @@ import vIfShowVue from './components/v-if-show.vue'
 import vForVue from './components/v-for.vue'
 import arrcomor from './components/arrcomor.vue'
 import ipnutcodeVue from './components/ipnutcode.vue'
+import bottonscVue from './components/bottonsc.vue'
 // import xsf from './components/xsf.vue'
 // import key_code from './components/keycode.vue'
-// ipnutcodeVue
 </script>
 
 <template>
@@ -18,6 +18,17 @@ import ipnutcodeVue from './components/ipnutcode.vue'
   <!-- <arrcomor/> -->
   <!-- <xsf /> -->
   <!-- <key_code /> -->
-  <ipnutcodeVue />
+  <!-- <ipnutcodeVue /> -->
+  <bottonsc-Vue :conmit="btoncscs" />
 </template>
+<script lang="ts">
+export default {
+  // components: { bottonscVue },
+  data() {
+    return {
+      btoncscs: '保存',
+    }
+  },
+}
+</script>
 <style lang="scss" scoped></style>
