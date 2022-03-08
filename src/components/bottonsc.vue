@@ -1,5 +1,5 @@
 <template>
-  <div class="btnbtn" :class="[type]">{{ conmit }}</div>
+  <div class="btnbtn" :class="[type, { 禁用 }]">{{ conmit }}</div>
 </template>
 
 <script lang="ts">
@@ -11,7 +11,15 @@ export default {
     },
     type: {
       type: String,
-      default: 'correct',
+      default: '待提交',
+      // Validator(v) {
+      //   // console.log(v)
+      //   return ['成功', '错误', '待提交'].includes(v)
+      // },
+    },
+    dis: {
+      type: Boolean,
+      default: false,
     },
   },
 }
@@ -36,6 +44,12 @@ export default {
   }
   &.错误 {
     background-color: #e74c3c;
+  }
+  &.待提交 {
+    background-color: #bdc3c7;
+  }
+  &.禁用 {
+    background-color: #ecf0f1;
   }
 }
 </style>

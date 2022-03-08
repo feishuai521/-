@@ -20,8 +20,7 @@ import bottonscVue from './components/bottonsc.vue'
   <!-- <key_code /> -->
   <!-- <ipnutcodeVue /> -->
   <div>
-    <bottonsc-Vue :conmit="btoncscs" :type="'成功'" />
-    <bottonsc-Vue :conmit="'错误'" :type="'错误'" />
+    <bottonsc-Vue v-for="(item, index) in list" v-bind="{ conmit: item.conmit, type: item.type, dis: item.dis }" :key="index" />
     <!-- <bottonsc-Vue :conmit="'错误'"  /> -->
   </div>
 </template>
@@ -31,6 +30,33 @@ export default {
   data() {
     return {
       btoncscs: '保存',
+      list: [
+        {
+          conmit: '保存',
+          type: '成功',
+          dis: false,
+        },
+        {
+          conmit: '错误',
+          type: '错误',
+          dis: false,
+        },
+        {
+          conmit: '待提交',
+          type: '待提交',
+          dis: false,
+        },
+        {
+          conmit: '禁用',
+          type: '禁用',
+          dis: true,
+        },
+        {
+          conmit: '确认',
+          type: '成功',
+          dis: false,
+        },
+      ],
     }
   },
 }
