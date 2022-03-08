@@ -19,7 +19,11 @@ import bottonscVue from './components/bottonsc.vue'
   <!-- <xsf /> -->
   <!-- <key_code /> -->
   <!-- <ipnutcodeVue /> -->
-  <bottonsc-Vue :conmit="btoncscs" />
+  <div>
+    <bottonsc-Vue :conmit="btoncscs" :type="'成功'" />
+    <bottonsc-Vue :conmit="'错误'" :type="'错误'" />
+    <!-- <bottonsc-Vue :conmit="'错误'"  /> -->
+  </div>
 </template>
 <script lang="ts">
 export default {
